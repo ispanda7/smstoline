@@ -5,7 +5,7 @@
 	date_default_timezone_set("Asia/Bangkok");
 
 	$sToken = "pfXihTK9m0yYSTBLm0evu6whEg4DPPj1HfWNPHiE7ot";
-	$sms = $_GET['sms'];
+	$sms = isset($_GET['sms']) ? $_GET['sms'] : '';
 	$sMessage = "\nมีsmsเข้าจ้า....\n ทดสอบส่ง SMS\n".$sms;
 
 	
