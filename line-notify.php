@@ -5,7 +5,7 @@
 	date_default_timezone_set("Asia/Bangkok");
 
 	$sToken = "pfXihTK9m0yYSTBLm0evu6whEg4DPPj1HfWNPHiE7ot";
-	$sMessage = "มีรายการสั่งซื้อเข้าจ้า....";
+	$sMessage = "มีรายการสั่งซื้อเข้าจ้า....\n ทดสอบส่ง SMS";
 
 	
 	$chOne = curl_init(); 
