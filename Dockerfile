@@ -1,4 +1,7 @@
-FROM php:7.2.5-apache
-RUN docker-php-ext-install mysqli
+FROM php:7-apache
+
+RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+
 COPY . /var/www/html
-EXPOSE 8080
+RUN chown -R www-data:www-data /var/www/html
